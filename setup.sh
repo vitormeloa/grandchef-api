@@ -64,6 +64,6 @@ echo -e "${GREEN}Subindo o Laravel Sail...${NC}"
 ./vendor/bin/sail up -d
 
 echo -e "${GREEN}Rodando as migrações e seeders...${NC}"
-./vendor/bin/sail artisan migrate:fresh --seed
+./vendor/bin/sail artisan migrate --seed
 
 echo -e "${GREEN}Setup completo! A API está configurada e rodando.${NC}"
