@@ -230,9 +230,7 @@ php artisan sail:install
 - **Endpoint**: `DELETE /api/categories/{id}`
 - **Descrição**: Exclui uma categoria existente.
 - **Exemplo de Resposta**:
-    ``` json
-    204 No Content
-    ```
+  > 204 No Content
 ---
 
 ### Produtos
@@ -379,9 +377,7 @@ php artisan sail:install
 - **Endpoint**: `DELETE /api/products/{id}`
 - **Descrição**: Exclui um produto existente.
 - **Exemplo de Resposta**:
-    ```json
-    204 No Content
-    ```
+  > 204 No Content
 ---
 
 ### Pedidos
@@ -562,9 +558,7 @@ php artisan sail:install
 - **Endpoint**: `DELETE /api/orders/{id}`
 - **Descrição**: Exclui um pedido existente.
 - **Exemplo de Resposta**:
-    ```json
-    204 No Content
-    ```
+  > 204 No Content
 ---
 
 ## Testes
