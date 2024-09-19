@@ -24,7 +24,12 @@ fi
 
 echo -e "${GREEN}Verificando Docker...${NC}"
 if command_exists docker; then
-    echo -e "${GREEN}Docker encontrado!${NC}"
+    if ! (docker info >/dev/null 2>&1); then
+        echo -e "${RED}Docker não está rodando. Por favor, inicie o Docker antes de continuar.${NC}"
+        exit 1
+    else
+        echo -e "${GREEN}Docker está rodando!${NC}"
+    fi
 else
     echo -e "${RED}Docker não está instalado. Por favor, instale o Docker antes de continuar.${NC}"
     exit 1
@@ -60,8 +65,16 @@ fi
 echo -e "${GREEN}Gerando a chave da aplicação...${NC}"
 php artisan key:generate
 
+echo -e "${GREEN}Instalando o Laravel Sail...${NC}"
+php artisan sail:install --with=mysql
+
 echo -e "${GREEN}Subindo o Laravel Sail...${NC}"
 ./vendor/bin/sail up -d
+
+if ! (docker info >/dev/null 2>&1); then
+    echo -e "${RED}Erro: Docker não está rodando ou falhou ao iniciar o Sail. Por favor, inicie o Docker e tente novamente.${NC}"
+    exit 1
+fi
 
 echo -e "${GREEN}Rodando as migrações e seeders...${NC}"
 ./vendor/bin/sail artisan migrate --seed
