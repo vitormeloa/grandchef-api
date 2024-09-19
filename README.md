@@ -109,7 +109,7 @@ php artisan key:generate
  5. Instalar o Laravel Sail
 
 ```bash
-php artisan sail:install
+php artisan sail:install --with=mysql
 ```
 
  6. Iniciar o ambiente Docker
