@@ -187,19 +187,19 @@ php artisan sail:install
       "name": "Bebidas"
     }
     ```
-- **Exemplo de Resposta**:
-    ```json
-    {
-        "status": "success",
-        "message": "Categoria criada com sucesso",
-        "data": {
-        "id": 1,
-        "name": "Bebidas",
-        "created_at": "2024-09-18T19:00:00.000000Z",
-        "updated_at": "2024-09-18T19:00:00.000000Z"
+    - **Exemplo de Resposta**:
+        ```json
+        {
+            "status": "success",
+            "message": "Categoria criada com sucesso",
+            "data": {
+                "id": 1,
+                "name": "Bebidas",
+                "created_at": "2024-09-18T19:00:00.000000Z",
+                "updated_at": "2024-09-18T19:00:00.000000Z"
+            }
         }
-    }
-    ```
+        ```
 
 #### **Atualizar uma categoria**
 - **Endpoint**: `PUT /api/categories/{id}`
@@ -357,21 +357,21 @@ php artisan sail:install
       "price": 5.50
     }
     ```
-- **Exemplo de Resposta**:
-    ```json
-    {
-        "status": "success",
-        "message": "Produto atualizado com sucesso",
-        "data": {
-        "id": 1,
-        "name": "Coca-Cola",
-        "category_id": 1,
-        "price": 5.5,
-        "created_at": "2024-09-18T19:00:00.000000Z",
-        "updated_at": "2024-09-18T19:00:00.000000Z"
+    - **Exemplo de Resposta**:
+        ```json
+        {
+            "status": "success",
+            "message": "Produto atualizado com sucesso",
+            "data": {
+                "id": 1,
+                "name": "Coca-Cola",
+                "category_id": 1,
+                "price": 5.5,
+                "created_at": "2024-09-18T19:00:00.000000Z",
+                "updated_at": "2024-09-18T19:00:00.000000Z"
+            }
         }
-    }
-    ```
+        ```
 
 #### **Excluir um produto**
 - **Endpoint**: `DELETE /api/products/{id}`
@@ -440,29 +440,29 @@ php artisan sail:install
           "status": "success",
           "message": "Pedido encontrado com sucesso",
           "data": {
-          "id": 1,
-          "status": "open",
-          "total_price": 10.00,
-          "created_at": "2024-09-18T19:00:00.000000Z",
-          "updated_at": "2024-09-18T19:00:00.000000Z",
-          "products": [
-              {
-                  "id": 2,
-                  "category_id": 1,
-                  "name": "Água",
-                  "price": "3.50",
-                  "created_at": "2024-09-18T17:14:07.000000Z",
-                  "updated_at": "2024-09-18T17:14:07.000000Z",
-                  "pivot": {
-                      "order_id": 2,
-                      "product_id": 2,
+              "id": 1,
+              "status": "open",
+              "total_price": 10.00,
+              "created_at": "2024-09-18T19:00:00.000000Z",
+              "updated_at": "2024-09-18T19:00:00.000000Z",
+              "products": [
+                  {
+                      "id": 2,
+                      "category_id": 1,
+                      "name": "Água",
                       "price": "3.50",
-                      "quantity": 2,
-                      "created_at": "2024-09-18T17:54:16.000000Z",
-                      "updated_at": "2024-09-18T17:54:16.000000Z"
+                      "created_at": "2024-09-18T17:14:07.000000Z",
+                      "updated_at": "2024-09-18T17:14:07.000000Z",
+                      "pivot": {
+                          "order_id": 2,
+                          "product_id": 2,
+                          "price": "3.50",
+                          "quantity": 2,
+                          "created_at": "2024-09-18T17:54:16.000000Z",
+                          "updated_at": "2024-09-18T17:54:16.000000Z"
+                      }
                   }
-              }
-          ]
+              ]
           }
       }
       ```
